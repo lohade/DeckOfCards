@@ -14,7 +14,7 @@ public class DeckOfCards{
     public void setRanks(String[] ranks) {
         this.ranks = ranks;
     }
-
+    //defegit
     public String[] getSuit() {
         return suit;
     }
