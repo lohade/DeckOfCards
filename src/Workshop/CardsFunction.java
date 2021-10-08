@@ -39,10 +39,23 @@ public class CardsFunction {
     }
 
     public void playerCards(int player){
-        for(int i=0;i<player;i++){
-            System.out.println(i);
-        }
+        for(int i=1;i<=player;i++){
 
+            System.out.println("player has cards"+i);
+            shuffleCards(cards);
+
+        }
+    }
+
+    public void shuffleCards(ArrayList<String> cards){
+        ArrayList<String> temp=new ArrayList<>();
+        while(!cards.isEmpty()){
+            int location=(int)(Math.random() *cards.size());
+            temp.add(cards.get(location));
+            cards.remove(location);
+        }
+        cards=temp;
+        display(cards);
     }
 
 }
